@@ -46,11 +46,18 @@ if exist %startingFolder%\Edge configuration files\Bookmarks (
 echo Fim configuracao Microsoft Edge.
 echo Instalando Google Chrome...
 
-
+choco install googlechrome -y
 
 echo Configurando Google Chrome...
+start "browser" /d "C:\Program Files\Google\Chrome\Application\" chrome.exe
+timeout 5
+taskkill /IM chrome.exe 2>nul
 
 
+cd %iserprofile%\AppData\Local\Microsoft\Edge\User Data\Default
+if exist %startingFolder%\Edge configuration files\Bookmarks (
+    copy "%startingFolder%\Edge configuration files\Bookmarks" "%iserprofile%\AppData\Local\Microsoft\Edge\User Data\Default"
+)
 
 
 echo Fim configuracao google Chrome.
