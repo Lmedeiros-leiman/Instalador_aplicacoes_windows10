@@ -62,6 +62,21 @@ if exist %startingFolder%\Edge configuration files\Bookmarks (
 
 echo Fim configuracao google Chrome.
 
+choco install java
+
+choco install adobe reader
+
+choco install klite
+
+choco install winrar
+
+choco install panda
+
+choco install office
+
+choco install ccleaner
+
+
 
 
 
