@@ -27,18 +27,33 @@ cd profiles\%var1%
 set "finalFolder=%cd%"
 
 if exist %startingFolder%\Firefox configuration files\prefs.js (
-   echo copiando Prefs.js
+   echo copiando Configuracoes...
    copy "%startingFolder%\Firefox configuration files\prefs.js" %finalFolder%
 ) 
 if exist %startingFolder%\Firefox configuration files\places.sqlite (
-   echo copiando SQLITE
+   echo copiando Favoritos...
    copy "%startingFolder%\Firefox configuration files\places.sqlite" %finalFolder%
 )
 
 echo Fim configuracao Firefox.
+echo Configurando Microsoft Edge...
+
+cd %iserprofile%\AppData\Local\Microsoft\Edge\User Data\Default
+if exist %startingFolder%\Edge configuration files\Bookmarks (
+    copy "%startingFolder%\Edge configuration files\Bookmarks" "%iserprofile%\AppData\Local\Microsoft\Edge\User Data\Default"
+)
+
+echo Fim configuracao Microsoft Edge.
+echo Instalando Google Chrome...
 
 
 
+echo Configurando Google Chrome...
+
+
+
+
+echo Fim configuracao google Chrome.
 
 
 
