@@ -4,51 +4,60 @@ echo %startingFolder%
 
 
 echo Verificando internet...
+ping 8.8.8.8 >nul
+if %errorlevel%==0 (
+    echo Conexao detectada, baixando aplicativos...
+    echo instalando Chocolatey : o responsavel por instalar nossos pacotes...
+    @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+   
+   echo Chocolatey istalado. Iniciando download das aplicações:
+   echo instalando Firefox...
+   chocho install firefox -y
+   echo Configurando o Firefox...
+   start "browser" /d "C:\Program Files\Mozilla Firefox" firefox.exe
+   timeout 5
+   taskkill /IM firefox.exe 2>nul
+   cd %appdata%\Mozilla\Firefox\
+   for /f "tokens=1,2 delims=/" %%i in ('findstr /l ".default" profiles.ini') do call set var1=%%j
+   cd profiles\%var1%
+   set "finalFolder=%cd%"
 
-
-echo Buscando atualizacoes windows...
-wuauclt /detectnow
-
-echo instalando Chocolatey : o responsavel por instalar nossos pacotes...
-
-@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
-
-
-
-echo instalando Firefox...
-chocho install firefox -y
-
-echo Configurando o Firefox...
-
-start "browser" /d "C:\Program Files\Mozilla Firefox" firefox.exe
-timeout 5
-taskkill /IM firefox.exe 2>nul
-cd %appdata%\Mozilla\Firefox\
-for /f "tokens=1,2 delims=/" %%i in ('findstr /l ".default" profiles.ini') do call set var1=%%j
-cd profiles\%var1%
-
-set "finalFolder=%cd%"
-
-if exist %startingFolder%\Firefox configuration files\prefs.js (
-   echo copiando Configuracoes...
-   copy "%startingFolder%\Firefox configuration files\prefs.js" %finalFolder%
-) 
-if exist %startingFolder%\Firefox configuration files\places.sqlite (
-   echo copiando Favoritos...
-   copy "%startingFolder%\Firefox configuration files\places.sqlite" %finalFolder%
+   if exist %startingFolder%\Firefox configuration files\prefs.js (
+      echo copiando Configuracoes...
+      copy "%startingFolder%\Firefox configuration files\prefs.js" %finalFolder%
+   ) 
+   if exist %startingFolder%\Firefox configuration files\places.sqlite (
+      echo copiando Favoritos...
+      copy "%startingFolder%\Firefox configuration files\places.sqlite" %finalFolder%
+   )
+   echo Fim configuracao Firefox.
+   
+   
+   echo Configurando Microsoft Edge...
+   cd %iserprofile%\AppData\Local\Microsoft\Edge\User Data\Default
+   if exist %startingFolder%\Edge configuration files\Bookmarks (
+       copy "%startingFolder%\Edge configuration files\Bookmarks" "%iserprofile%\AppData\Local\Microsoft\Edge\User Data\Default"
+   )
+   echo Fim configuracao Microsoft Edge.
+   
+   
+   
+   
+    
+) else (
+    echo Sem acesso a internet, seguindo para o proximo passo.
 )
 
-echo Fim configuracao Firefox.
-echo Configurando Microsoft Edge...
 
-cd %iserprofile%\AppData\Local\Microsoft\Edge\User Data\Default
-if exist %startingFolder%\Edge configuration files\Bookmarks (
-    copy "%startingFolder%\Edge configuration files\Bookmarks" "%iserprofile%\AppData\Local\Microsoft\Edge\User Data\Default"
-)
 
-echo Fim configuracao Microsoft Edge.
+
+
+
+
+
+
+
 echo Instalando Google Chrome...
-
 choco install googlechrome -y
 
 echo Configurando Google Chrome...
@@ -56,28 +65,29 @@ start "browser" /d "C:\Program Files\Google\Chrome\Application\" chrome.exe
 timeout 5
 taskkill /IM chrome.exe 2>nul
 
-
 cd %iserprofile%\AppData\Local\Microsoft\Edge\User Data\Default
 if exist %startingFolder%\Edge configuration files\Bookmarks (
     copy "%startingFolder%\Edge configuration files\Bookmarks" "%iserprofile%\AppData\Local\Microsoft\Edge\User Data\Default"
 )
-
-
 echo Fim configuracao google Chrome.
 
-choco install java
+echo baixando Java(usuário)...
+choco install jre8 -y
 
-choco install adobe reader
+echo baixando Adobe Reader...
+choco install adobereader -y
 
-choco install klite
+echo baixando K-Lite...
+choco install k-litecodecpackmega -y
 
-choco install winrar
+echo baixando Winrar...
+choco install winrar -y
 
-choco install panda
+echo baixando pacote office...
+choco install microsoft-office -y
 
-choco install office
-
-choco install ccleaner
+echo baixando Ccleaner...
+choco install ccleaner -y
 
 
 
@@ -105,6 +115,6 @@ ie4uinit.exe -show
 
 
 
-
+echo Aviso: Panda antivirus não instalado, ele não existe na livraria do choco e deve ser instalado manualmente.
 
 
