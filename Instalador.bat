@@ -95,6 +95,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcon
 
 
 
+echo Atualizando menu incial...
+ie4uinit.exe -show
 
 
 
