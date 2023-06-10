@@ -2,6 +2,10 @@
 set "startingFolder=%cd%"
 echo %startingFolder%
 
+
+echo Verificando internet...
+
+
 echo Buscando atualizacoes windows...
 wuauclt /detectnow
 
@@ -14,7 +18,6 @@ echo instalando Chocolatey : o responsavel por instalar nossos pacotes...
 echo instalando Firefox...
 chocho install firefox -y
 
-timeout 1
 echo Configurando o Firefox...
 
 start "browser" /d "C:\Program Files\Mozilla Firefox" firefox.exe
