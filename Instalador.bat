@@ -40,24 +40,7 @@ if %errorlevel%==0 (
    )
    echo Fim configuracao Microsoft Edge.
    
-   
-   
-   
-    
-) else (
-    echo Sem acesso a internet, seguindo para o proximo passo.
-)
-
-
-
-
-
-
-
-
-
-
-echo Instalando Google Chrome...
+   echo Instalando Google Chrome...
 choco install googlechrome -y
 
 echo Configurando Google Chrome...
@@ -92,6 +75,17 @@ choco install ccleaner -y
 
 
 echo Fim das instalações...
+   
+   
+    
+) else (
+    echo Sem acesso a internet, seguindo para o proximo passo.
+)
+
+
+
+
+
 echo Começando a reconfigurar windows:
 
 echo Reconfigurando barra de tarefas...
