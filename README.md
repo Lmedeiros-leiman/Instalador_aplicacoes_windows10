@@ -1,13 +1,10 @@
 # Instalador aplicacoes windows10
 
 Este aplicativo ira instalar alguns aplicativos comuns no computador do usuário e então ira remover sua presença, porem as variaveis de ambiente devem ser removidas manualmente, sugiro executar o seguinte comando no terminal para acessar o menu:
-- ``` start "System Environment Variables" /WAIT "SystemPropertiesAdvanced.exe" /e ```
-
-
 
 ```cmd
-@echo off
-echo This is a sample message.
+
+start "System Environment Variables" /WAIT "SystemPropertiesAdvanced.exe" /e
 ```
 
 
