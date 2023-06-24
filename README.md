@@ -4,12 +4,12 @@ Este aplicativo ira instalar alguns aplicativos comuns no computador do usuário
 - ``` start "System Environment Variables" /WAIT "SystemPropertiesAdvanced.exe" /e ```
 
 
-<pre>
+
 ```cmd
 @echo off
 echo This is a sample message.
 ```
-</pre>
+
 
 ## O aplicativo REQUER ser executado como administrador.
 ## O aplicativo REQUER acesso á internet para funcionar.
