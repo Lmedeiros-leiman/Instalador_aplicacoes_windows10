@@ -1,0 +1,60 @@
+{
+   "checksum": "48373174ec730328f20cc76856f208da",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13330558604000000",
+            "date_last_used": "0",
+            "guid": "3a747a3e-e900-4560-9424-07d09fb71c7f",
+            "id": "6",
+            "name": "Facebook",
+            "type": "url",
+            "url": "https://www.facebook.com/"
+         }, {
+            "date_added": "13330555968000000",
+            "date_last_used": "0",
+            "guid": "13fd0011-98d9-423a-badc-bfd74bdded44",
+            "id": "7",
+            "name": "YouTube",
+            "type": "url",
+            "url": "https://www.youtube.com/"
+         }, {
+            "date_added": "13330555977000000",
+            "date_last_used": "0",
+            "guid": "a43762d3-ebd0-41bb-bff3-e139ee074c05",
+            "id": "8",
+            "name": "Reddit - Explore o que quiser",
+            "type": "url",
+            "url": "https://www.reddit.com/"
+         } ],
+         "date_added": "13330571160317694",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Barra de favoritos",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13330571160317698",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Outros favoritos",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13330571160317710",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Favoritos nos dispositivos móveis",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

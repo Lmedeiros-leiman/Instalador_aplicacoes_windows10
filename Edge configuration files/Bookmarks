@@ -1,0 +1,139 @@
+{
+   "checksum": "3bc2c9a582873146152d360400ecdc1d",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13330558604000000",
+            "date_last_used": "0",
+            "guid": "0d6931f5-9216-43db-9d2b-bac9c515ad55",
+            "id": "6",
+            "name": "Facebook",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "https://www.facebook.com/"
+         }, {
+            "date_added": "13330555968000000",
+            "date_last_used": "0",
+            "guid": "7aab1f8e-6477-40f7-ab01-c33c1cb08185",
+            "id": "7",
+            "name": "YouTube",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "https://www.youtube.com/"
+         }, {
+            "date_added": "13330555977000000",
+            "date_last_used": "0",
+            "guid": "a4e72431-853f-4763-bad0-b8447ca304b9",
+            "id": "8",
+            "name": "Reddit - Explore o que quiser",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "https://www.reddit.com/"
+         }, {
+            "date_added": "13330565952001970",
+            "date_last_used": "0",
+            "guid": "6860f49c-ace3-4c21-ac12-758b9457c699",
+            "id": "16",
+            "name": "Nova guia",
+            "show_icon": false,
+            "source": "user_add",
+            "type": "url",
+            "url": "edge://newtab/"
+         } ],
+         "date_added": "13330554625215886",
+         "date_last_used": "0",
+         "date_modified": "13330565952001970",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Barra de favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "children": [ {
+               "children": [ {
+                  "date_added": "13330557037000000",
+                  "date_last_used": "0",
+                  "guid": "4f86ec57-6c06-4f3e-9016-305d1ca11c2c",
+                  "id": "11",
+                  "name": "Obter ajuda",
+                  "show_icon": false,
+                  "source": "import_fre",
+                  "type": "url",
+                  "url": "https://support.mozilla.org/products/firefox"
+               }, {
+                  "date_added": "13330557037000000",
+                  "date_last_used": "0",
+                  "guid": "290339df-cea0-46fc-9c9c-51b440929498",
+                  "id": "12",
+                  "name": "Personalizar o Firefox",
+                  "show_icon": false,
+                  "source": "import_fre",
+                  "type": "url",
+                  "url": "https://support.mozilla.org/kb/customize-firefox-controls-buttons-and-toolbars?utm_source=firefox-browser&utm_medium=default-bookmarks&utm_campaign=customize"
+               }, {
+                  "date_added": "13330557037000000",
+                  "date_last_used": "0",
+                  "guid": "ba5a0924-aa0d-44ae-bb04-e1ccad64a274",
+                  "id": "13",
+                  "name": "Participe",
+                  "show_icon": false,
+                  "source": "import_fre",
+                  "type": "url",
+                  "url": "https://www.mozilla.org/contribute/"
+               }, {
+                  "date_added": "13330557037000000",
+                  "date_last_used": "0",
+                  "guid": "3421e0f8-d379-4d19-b361-f200cb663fa2",
+                  "id": "14",
+                  "name": "Sobre nós",
+                  "show_icon": false,
+                  "source": "import_fre",
+                  "type": "url",
+                  "url": "https://www.mozilla.org/about/"
+               } ],
+               "date_added": "13330565516254621",
+               "date_last_used": "0",
+               "date_modified": "0",
+               "guid": "555bf6e1-3c58-4c8a-b7d6-0352467bf835",
+               "id": "10",
+               "name": "Mozilla Firefox",
+               "source": "import_fre",
+               "type": "folder"
+            } ],
+            "date_added": "13330565516254323",
+            "date_last_used": "0",
+            "date_modified": "0",
+            "guid": "99d3d796-4f32-4fe0-967d-edd2209e2bc5",
+            "id": "9",
+            "name": "Menu de Marcadores do Mozilla Firefox",
+            "source": "import_fre",
+            "type": "folder"
+         } ],
+         "date_added": "13330554625215889",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Outros favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13330554625215891",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Favoritos do celular",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
