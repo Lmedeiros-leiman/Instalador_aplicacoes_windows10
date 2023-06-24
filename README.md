@@ -2,6 +2,10 @@
 
 Este aplicativo ira instalar alguns aplicativos comuns no computador do usuário e então ira remover sua presença, porem as variaveis de ambiente devem ser removidas manualmente, sugiro executar o seguinte comando no terminal para acessar o menu:
 - ``` start "System Environment Variables" /WAIT "SystemPropertiesAdvanced.exe" /e ```
+````cmd
+echo This is a sample message.
+```
+```
 
 ## O aplicativo REQUER ser executado como administrador.
 ## O aplicativo REQUER acesso á internet para funcionar.
@@ -20,7 +24,4 @@ Após a instalação dos aplicativos sera iniciada a configuração dos mesmos, 
 ### os arquivos de configuração podem ser mechidos, porem saiba o que esta fazendo.
 na finalização da execução, a área de trabalho ganhara alguns novos icones e acessos, enquanto as barras de pesquisa e noticias serão ocultadas/minimalizadas.
 
-````cmd
-echo This is a sample message.
-```
-```
+
