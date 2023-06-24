@@ -5,7 +5,7 @@ Este aplicativo ira instalar alguns aplicativos comuns no computador do usuário
 
 
 <pre>
-```
+```cmd
 @echo off
 echo This is a sample message.
 ```
