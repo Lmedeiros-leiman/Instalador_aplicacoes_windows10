@@ -23,17 +23,21 @@ if %errorlevel%==0 (
    set "finalFolder=%cd%"
 
    if exist %startingFolder%\Firefox configuration files\prefs.js (
-      echo copiando Configuracoes...
+      echo copiando Configuracoes firefox...
       copy "%startingFolder%\Firefox configuration files\prefs.js" %finalFolder%
    ) 
    if exist %startingFolder%\Firefox configuration files\places.sqlite (
-      echo copiando Favoritos...
+      echo copiando Favoritos firefox...
       copy "%startingFolder%\Firefox configuration files\places.sqlite" %finalFolder%
    )
    echo Fim configuracao Firefox.
    
    
    echo Configurando Microsoft Edge...
+   start microsoft-edge:
+   timeout /t 5 > nul
+   taskkill /f /im msedge.exe
+
    cd %iserprofile%\AppData\Local\Microsoft\Edge\User Data\Default
    if exist %startingFolder%\Edge configuration files\Bookmarks (
        copy "%startingFolder%\Edge configuration files\Bookmarks" "%iserprofile%\AppData\Local\Microsoft\Edge\User Data\Default"
