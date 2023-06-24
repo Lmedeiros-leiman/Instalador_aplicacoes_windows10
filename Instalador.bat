@@ -35,10 +35,10 @@ if %errorlevel%==0 (
    
    echo Configurando Microsoft Edge...
    start microsoft-edge:
-   timeout /t 5 > nul
+   timeout /t 15 > nul
    taskkill /f /im msedge.exe
 
-   cd %iserprofile%\AppData\Local\Microsoft\Edge\User Data\Default
+   cd %userprofile%\AppData\Local\Microsoft\Edge\User Data\Default
    if exist %startingFolder%\Edge configuration files\Bookmarks (
        copy "%startingFolder%\Edge configuration files\Bookmarks" "%iserprofile%\AppData\Local\Microsoft\Edge\User Data\Default"
    )
