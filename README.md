@@ -21,3 +21,35 @@ Após a instalação dos aplicativos sera iniciada a configuração dos mesmos, 
 na finalização da execução, a área de trabalho ganhara alguns novos icones e acessos, enquanto as barras de pesquisa e noticias serão ocultadas/minimalizadas.
 
 
+```html
+<div class="copy-box">
+  <button class="copy-button" onclick="copyToClipboard(this)">
+    Copy
+  </button>
+  <pre>
+    <code>
+      @echo off
+      echo This is a script example.
+      REM Some commands or code here.
+      echo Script execution completed.
+    </code>
+  </pre>
+</div>
+
+<script>
+function copyToClipboard(button) {
+  const codeBlock = button.nextElementSibling.querySelector('code');
+  const text = codeBlock.innerText;
+
+  navigator.clipboard.writeText(text)
+    .then(() => {
+      button.innerText = 'Copied!';
+      setTimeout(() => {
+        button.innerText = 'Copy';
+      }, 2000);
+    })
+    .catch((error) => {
+      console.error('Failed to copy:', error);
+    });
+}
+</script>
