@@ -16,7 +16,7 @@ if %errorlevel%==0 (
    echo Configurando o Firefox...
    start "browser" /d "C:\Program Files\Mozilla Firefox" firefox.exe
    timeout 20
-   taskkill /IM firefox.exe 2>nul
+   taskkill /IM firefox.exe
    cd %appdata%\Mozilla\Firefox\
    for /f "tokens=1,2 delims=/" %%i in ('findstr /l ".default" profiles.ini') do call set var1=%%j
    cd profiles\%var1%
@@ -35,7 +35,7 @@ if %errorlevel%==0 (
    
    echo Configurando Microsoft Edge...
    start microsoft-edge:
-   timeout /t 20 > nul
+   timeout /t 20
    taskkill /f /im msedge.exe
 
    cd %userprofile%\AppData\Local\Microsoft\Edge\User Data\Default
