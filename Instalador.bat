@@ -12,10 +12,10 @@ if %errorlevel%==0 (
    
    echo Chocolatey istalado. Iniciando download das aplicações:
    echo instalando Firefox...
-   chocho install firefox -y
+   choco install firefox -y
    echo Configurando o Firefox...
    start "browser" /d "C:\Program Files\Mozilla Firefox" firefox.exe
-   timeout 5
+   timeout 20
    taskkill /IM firefox.exe 2>nul
    cd %appdata%\Mozilla\Firefox\
    for /f "tokens=1,2 delims=/" %%i in ('findstr /l ".default" profiles.ini') do call set var1=%%j
@@ -35,7 +35,7 @@ if %errorlevel%==0 (
    
    echo Configurando Microsoft Edge...
    start microsoft-edge:
-   timeout /t 15 > nul
+   timeout /t 20 > nul
    taskkill /f /im msedge.exe
 
    cd %userprofile%\AppData\Local\Microsoft\Edge\User Data\Default
@@ -49,7 +49,7 @@ choco install googlechrome -y
 
 echo Configurando Google Chrome...
 start "browser" /d "C:\Program Files\Google\Chrome\Application\" chrome.exe
-timeout 5
+timeout 20
 taskkill /IM chrome.exe 2>nul
 
 cd %iserprofile%\AppData\Local\Microsoft\Edge\User Data\Default
