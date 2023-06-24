@@ -2,6 +2,16 @@
 set "startingFolder=%cd%"
 echo %startingFolder%
 
+NET SESSION >nul 2>&1
+if %errorLevel% == 0 (
+    echo Rodando com previlegios adminsitrativos...
+    echo continuando...
+) else (
+    echo Favor executar com previlegios administrativos
+    echo Aperte uma tecla para sair...
+    exit
+)
+
 
 echo Verificando internet...
 ping 8.8.8.8 >nul
