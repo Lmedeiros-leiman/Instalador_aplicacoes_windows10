@@ -1,10 +1,10 @@
 # Instalador aplicacoes windows10
 
 Este aplicativo ira instalar alguns aplicativos comuns no computador do usuário e então ira remover sua presença, porem as variaveis de ambiente devem ser removidas manualmente, sugiro executar o seguinte comando no terminal para acessar o menu:
-start "System Environment Variables" /WAIT "SystemPropertiesAdvanced.exe" /e
+- start "System Environment Variables" /WAIT "SystemPropertiesAdvanced.exe" /e
 
-#O aplicativo REQUER ser executado como administrador.
-#O aplicativo REQUER acesso á internet para funcionar.
+## O aplicativo REQUER ser executado como administrador.
+## O aplicativo REQUER acesso á internet para funcionar.
 
 Ao ser executado o aplicativo ira instalar chocolatey no computador e em seguida instalar as seguintes aplicações:
 - Google Chrome
