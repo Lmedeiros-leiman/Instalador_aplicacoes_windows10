@@ -22,7 +22,9 @@ Ao ser executado o aplicativo ira instalar chocolatey no computador e em seguida
 - K-Lite
 
 Após a instalação dos aplicativos sera iniciada a configuração dos mesmos, tendo a inicialização dos navegadores para criar os arquivos de perfil do usuário.
-### os arquivos de configuração podem ser mechidos, porem saiba o que esta fazendo.
+### os arquivos de configuração podem ser mechidos, porem saiba o que esta fazendo:
+os arquivos são configurações ja salvas dos aplicativos, apenas entre na pasta do aplicativo e procure por um arquivo de mesmo nome que o na pasta de configuração. no caso dos navegadores isto salvara os favoritos e até mesmo a escolha de layout.
+
 na finalização da execução, a área de trabalho ganhara alguns novos icones e acessos, enquanto as barras de pesquisa e noticias serão ocultadas/minimalizadas.
 
 
