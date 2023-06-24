@@ -75,9 +75,31 @@ choco install ccleaner -y
 
 
 echo Fim das instalações...
-   
-   
-    
+echo Removendo choco do computador...
+
+set chocolateyFolder=C:\ProgramData\chocolatey
+set chocolateyHttpCacheFolder=C:\ProgramData\chocolateyHtppCache
+
+if exist "%chocolateyFolder%" (
+    echo Removing Chocolatey folder...
+    rmdir /s /q "%folderPath%"
+    echo pasta Chocolatey removido com sucesso
+) else (
+    echo pasta Chocolatey nao encontrada...
+)
+if exist "%chocolateyHttpCacheFolder%" (
+    echo Removing Chocolatey folder...
+    rmdir /s /q "%folderPath%"
+    echo pasta Chocolatey removido com sucesso
+) else (
+    echo pasta Chocolatey nao encontrada...
+)
+
+
+
+pause
+
+
 ) else (
     echo Sem acesso a internet, seguindo para o proximo passo.
 )
@@ -110,5 +132,5 @@ ie4uinit.exe -show
 
 
 echo Aviso: Panda antivirus não instalado, ele não existe na livraria do choco e deve ser instalado manualmente.
-
+pause
 
